@@ -1,0 +1,131 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  background-color:#ced6e0;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+#appTitle{
+  font-size:50px ;
+}
+
+.infoBox{
+  border-style: ridge;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-right: 50px;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+
+.wholeContainer{
+  display:flex;
+  justify-content: space-around;
+}
+
+.mainRight {
+  border-style: groove;
+  
+}
+
+.channelList {
+  display: flex;
+  flex-direction: column;
+}
+
+.channelBtn{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  
+}
+
+.channelBtn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#cjBtn{
+  background-color: #ff4757;
+}
+
+#lgbtqBtn{
+  background-color: red;
+  animation-name: lgbtqBtn;
+  animation: lgbtqBtn 10s infinite;
+}
+
+@keyframes lgbtqBtn{
+  0% {background-color:#e60000;}
+  10% {background-color: #ff1a1a;}
+  20% {background-color: #ff8c1a;}
+  30% {background-color: #ffff00;}
+  40% {background-color: #80ff80;}
+  50%{background-color: #1aff1a;}
+  60%{background-color: #33cccc;}
+  70%{background-color: #33adff;}
+  80%{background-color: #0066ff;}
+  90%{background-color: #cc66ff;}
+  100{background-color: #8000ff;}
+}
+
+#immiBtn{
+  background-color: #5352ed;
+}
+
+#glBtn{
+   background-color: #fd79a8;
+}
+
+  
+/* Post CSS */
+.posts {
+  display:flex;
+  flex-direction: column-reverse;
+}
+.postInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.postTitle {
+  margin-right: 20px;
+} 
+.post {
+  border-bottom: 1px solid black;
+}
+
+.title{  
+  font-family: 'Lora', serif;
+  color:black;
+}
+
+ background-color:#636e72;
+
+.add-post-form {
+  display:flex;
+  flex-direction: column;
+}
+
+#user-input-content {
+  min-height: 100px;
+  min-width: 50px;
+} 
+
+
+

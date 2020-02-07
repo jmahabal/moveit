@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Movement Move It !</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1 id="appTitle">
+        MoveIt
+      </h1>
+<!--       <h3>
+        Created by:
+      </h3> -->
+    </div>
+
+    <div class="wholeContainer">
+      <div class="mainLeft">
+        <div class="container">
+          <div class="topics">
+            <div class="channelInfo">
+              <div>
+                <h1 class="title"></h1>
+              </div>
+              <div class="about">
+                <h3 class="infoBox"></h3>
+              </div>
+              <div class="video"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="input-fields">
+          <h4>
+            Create a post:
+          </h4>
+          
+          <form id="add-post-form">
+            <div>
+              <input id="user-input-title" name="title" placeholder="Title" />
+            </div>
+            <div>
+              <input id="user-input-content" name="content" placeholder="Content" />
+            </div>
+            <div>
+              <select id="user-input-topic" name="topic">
+                <option value="crimJustice">Criminal Justice</option>
+                <option value="LGBTQ">LGBTQ</option>
+                <option value="immigration">Immigration</option>
+                <option value="gunLaws">Gun Laws</option>
+              </select>           
+            </div>
+            
+            <button id="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+        
+        <div class="postSection">
+          <h2>
+            New Posts:
+          </h2>
+          <div id="posts">
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="mainRight">
+        <h4>
+          <h3 class="channelList">
+            <div>
+              <button id="cjBtn" class="channelBtn">Criminal Justice</button>
+            </div>
+            <div>
+              <button id="lgbtqBtn" class="channelBtn">LGBTQ News</button>
+            </div>
+            <div>
+              <button id="immiBtn" class="channelBtn">Immigration Updates</button>
+            </div>
+            <div>
+              <button id="glBtn" class="channelBtn">Gun Laws</button>
+            </div>
+          </h3> 
+          
+        </h4>
+      </div>
+    </div>
+    <br><br><br><br><br><br>
+    <div id="dbTestDiv">
+      <ul id="dbTest"> 
+      </ul>
+    </div>
+
+    <!--DATABASE CODE FOR FIREBASE, do not move! -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAnUwPaCadhuST1tFZS2gdubQfaP7eLPp0",
+        authDomain: "movementmoveit.firebaseapp.com",
+        databaseURL: "https://movementmoveit.firebaseio.com",
+        projectId: "movementmoveit",
+        storageBucket: "movementmoveit.appspot.com",
+        messagingSenderId: "995764108932",
+        appId: "1:995764108932:web:820af417dab33e2416ccd1",
+        measurementId: "G-8CP583DYM3"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      const db = firebase.firestore();
+    </script>
+  </body>
+</html>
